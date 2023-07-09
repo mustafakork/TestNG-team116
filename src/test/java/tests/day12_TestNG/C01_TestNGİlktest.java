@@ -14,11 +14,21 @@ public class C01_TestNGİlktest {
         ReusableMethods.bekle(5);
 
         Driver.closeDriver();
+    }
+    @Test
+    public void test02(){
+        //youtube anasayfasınna gidin
 
+        Driver.getDriver().get("https://www.youtube.com");
+        ReusableMethods.bekle(3);
+        //Url yazdırın
+        Driver.getDriver().getCurrentUrl();
+        ReusableMethods.bekle(3);
 
-
-
-
+        Driver.closeDriver();
 
     }
+
+
+
 }
