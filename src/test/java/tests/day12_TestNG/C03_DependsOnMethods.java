@@ -30,8 +30,7 @@ public class C03_DependsOnMethods {
         WebElement aramaKutusu = Driver.getDriver().findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("nutella"+ Keys.ENTER);
 
-        WebElement aramaSonucElementi =Driver.getDriver().findElement(By.id("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
-
+        WebElement aramaSonucElementi =Driver.getDriver().findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"));
             String expectedSonucİçerik="nutella";
             String actualSonucİçerik = aramaSonucElementi.getText();
 
@@ -54,8 +53,10 @@ String expedtedilkürünİsim = "Nutella";
 String actualİlkÜrünisim = ilkürünİsim.getText();
 
 Assert.assertTrue(actualİlkÜrünisim.contains(expedtedilkürünİsim));
-
+Driver.closeDriver();
 }
+
+
 
 
 }
