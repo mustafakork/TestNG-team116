@@ -9,6 +9,7 @@ import utulities.Driver;
 
 public class C03_DependsOnMethods {
     //amazon anasayfasına gidelim
+    //
     //3 farklı test metodu oluşturup şu testleri yapın
     // 1- url amazon içerdiğini test edin
     // 2- nutella aratıp sonucun nutella içerdiğini test edin
