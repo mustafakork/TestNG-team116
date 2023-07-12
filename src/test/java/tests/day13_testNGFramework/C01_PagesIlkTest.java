@@ -15,7 +15,7 @@ public class C01_PagesIlkTest {
         //sayfayı kapatın
         Driver.getDriver().get("https://amazon.com");
         AmazonPage amazonPage =new AmazonPage();
-        amazonPage.aramaKutusu.sendKeys("Nutella"+ Keys.+);
+        amazonPage.aramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
 
     }
 }
