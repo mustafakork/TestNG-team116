@@ -7,7 +7,8 @@ import java.util.Properties;
 public class ConfigReader {
 
     static Properties properties;
-    static {
+    static { // static blok
+
         String dosyaYolu = "configuration.properties";
         try {
             FileInputStream fis = new FileInputStream(dosyaYolu);
@@ -18,6 +19,7 @@ public class ConfigReader {
         }
     }
     public static String getProperty(String key) {
+
         return properties.getProperty(key);
     }
 }
