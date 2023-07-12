@@ -1,5 +1,6 @@
 package tests.day13_testNGFramework;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QDemyPage;
 import utilities.ConfigReader;
@@ -24,7 +25,7 @@ public class C07_QdemyNegatifTesti {
           qDemyPage.emailloginElementi.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
           qDemyPage.paswordElementi.sendKeys(ConfigReader.getProperty("qdGecersizPasword"));
        qDemyPage.ikinciloginElementi.click();
-       qDemyPage.sonucYazıElementi.
+      Assert.assertTrue(qDemyPage.sonucYazıElementi.isDisplayed());
       }
     /*@Test
     public void gecersizPaswordTesti2() {
