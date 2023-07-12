@@ -3,7 +3,7 @@ package tests.day13_testNGFramework;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
-import utulities.Driver;
+import utilities.Driver;
 
 public class C01_PagesIlkTest {
 

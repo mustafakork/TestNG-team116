@@ -1,8 +1,8 @@
 package tests.day12_TestNG;
 
 import org.testng.annotations.Test;
-import utulities.Driver;
-import utulities.ReusableMethods;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C01_TestNGİlktest {
 
@@ -22,7 +22,7 @@ public class C01_TestNGİlktest {
         Driver.getDriver().get("https://www.youtube.com");
         ReusableMethods.bekle(3);
         //Url yazdırın
-        Driver.getDriver().getCurrentUrl();
+        System.out.println(Driver.getDriver().getCurrentUrl());
         ReusableMethods.bekle(3);
 
         Driver.closeDriver();

@@ -2,8 +2,8 @@ package tests.day15_DataProvider;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import utulities.Driver;
-import utulities.ReusableMethods;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C01_reusableClassSwitchWindow {
 

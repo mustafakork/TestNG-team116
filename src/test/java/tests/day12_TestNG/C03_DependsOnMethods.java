@@ -5,20 +5,20 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utulities.Driver;
+import utilities.Driver;
 
 public class C03_DependsOnMethods {
     //amazon anasayfasına gidelim
     //
     //3 farklı test metodu oluşturup şu testleri yapın
-    // 1- url amazon içerdiğini test edin
+
     // 2- nutella aratıp sonucun nutella içerdiğini test edin
     // 3- ilk ürüne click yapıp açılan sayfadaki ürün isminin nutalla içerdiğini test edin
 
     @Test(priority = 1)
     public  void amazonUrlTest(){
        Driver.getDriver().get("https://www.amazon.com");
-
+        // 1- url amazon içerdiğini test edin
        String  expectedUrl="amazon";
        String actualUrl = Driver.getDriver().getCurrentUrl();
 
@@ -26,8 +26,10 @@ public class C03_DependsOnMethods {
 
     }
 
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "amazonUrlTest")
     public void nutellAramaTest(){
+        // 2- nutella aratıp sonucun nutella içerdiğini test edin
+
         WebElement aramaKutusu = Driver.getDriver().findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("nutella"+ Keys.ENTER);
 
@@ -39,7 +41,7 @@ public class C03_DependsOnMethods {
 
 
     }
-@Test(priority = 3)
+@Test(dependsOnMethods = "nutellAramaTest")
     public void urunİsimTest(){
     // 3- ilk ürüne click yapıp açılan sayfadaki ürün isminin nutalla içerdiğini
 
