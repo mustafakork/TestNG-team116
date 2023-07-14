@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.QDemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C07_QdemyNegatifTesti {
    @Test
@@ -23,11 +24,15 @@ public class C07_QdemyNegatifTesti {
     // - gecerli username, gecersiz password
 
           qDemyPage.emailloginElementi.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
+
           qDemyPage.paswordElementi.sendKeys(ConfigReader.getProperty("qdGecersizPasword"));
-       qDemyPage.ikinciloginElementi.click();
-      Assert.assertTrue(qDemyPage.sonucYazıElementi.isDisplayed());
+       ReusableMethods.bekle(2);
+          qDemyPage.ikinciloginElementi.click();
+          ReusableMethods.bekle(1);
+      Assert.assertTrue(qDemyPage.emailloginElementi.isDisplayed());
+      Driver.closeDriver();
       }
-    /*@Test
+    @Test
     public void gecersizPaswordTesti2() {
 
 
@@ -38,10 +43,15 @@ public class C07_QdemyNegatifTesti {
         //2- login linkine basin
         QDemyPage qDemyPage = new QDemyPage();
         qDemyPage.ılklogin.click();
+        ReusableMethods.bekle(1);
+        qDemyPage.cookies.click();
         // - gecersiz username, gecerli password
 
         qDemyPage.emailloginElementi.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
-        qDemyPage.paswordElementi.sendKeys(ConfigReader.getProperty("Nevzat152032"));
+        qDemyPage.paswordElementi.sendKeys(ConfigReader.getProperty("qdGecerliPasword"));
+        qDemyPage.ikinciloginElementi.click();
+        Assert.assertTrue(qDemyPage.emailloginElementi.isDisplayed());
+        Driver.closeDriver();
     }
         @Test
         public void gecersizPaswordTesti3(){
@@ -53,13 +63,18 @@ public class C07_QdemyNegatifTesti {
 
             //2- login linkine basin
             QDemyPage qDemyPage =new QDemyPage();
+            ReusableMethods.bekle(1);
             qDemyPage.ılklogin.click();
+            ReusableMethods.bekle(1);
+            qDemyPage.cookies.click();
     // - gecersiz username, gecersiz password.
       qDemyPage.emailloginElementi.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
       qDemyPage.paswordElementi.sendKeys(ConfigReader.getProperty("qdGecersizPasword"));
     // 4- Login butonuna basarak login olun
       qDemyPage.ikinciloginElementi.click();
+      ReusableMethods.bekle(1);
     // 5- Basarili olarak giris yapilamadigini test edin
+Assert.assertTrue(qDemyPage.emailloginElementi.isDisplayed());
+Driver.closeDriver();
 
-     */
-}
+}}
