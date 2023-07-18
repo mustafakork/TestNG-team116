@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="cross Browser Çalıştırma">
+<suite name="cross Browser Çalıştırma" parallel="tests" thread-count="2">
     <!--    kaç farklı browser  kullanacak
     her biri  için test tagından itibaren
     çalışacak testleri yazmlıyız
@@ -9,18 +9,21 @@
     -->
     <test name="Cross ile çalışacak testler">
         <parameter name="browser" value="chrome"></parameter>
-        <packages>
-            <package name="tests.day15_crossBrowserTestler"></package>
+        <classes>
+            <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"></class>
+
             
-        </packages>
+        </classes>
+        
     </test>
 
-    <test name="Edge ile çalışacak testler">
+    <test name="Firefox ile çalışacak testler">
         <parameter name="browser" value="edge"></parameter>
-        <packages>
-            <package name="tests.day15_crossBrowserTestler"></package>
+        <classes>
+            <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"></class>
             
-        </packages>
+        </classes>
+       
 
 
     </test>
