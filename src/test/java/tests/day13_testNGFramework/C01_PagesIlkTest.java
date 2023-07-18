@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 
 public class C01_PagesIlkTest {
 
-    @Test
+    @Test(groups = "mini regression1")
     public void amazonTest(){
 
         //amazon anasayfaya gidin

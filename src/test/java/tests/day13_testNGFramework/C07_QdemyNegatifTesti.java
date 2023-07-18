@@ -8,7 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class C07_QdemyNegatifTesti {
-   @Test
+   @Test(groups = "smoke")
    public void gecersizPaswordTesti(){
 
 
@@ -32,7 +32,7 @@ public class C07_QdemyNegatifTesti {
       Assert.assertTrue(qDemyPage.emailloginElementi.isDisplayed());
       Driver.closeDriver();
       }
-    @Test
+    @Test(groups = "smoke")
     public void gecersizPaswordTesti2() {
 
 
