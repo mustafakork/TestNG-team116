@@ -14,15 +14,20 @@
                     <include name="facebookTesti"></include>
                 </methods>
 
-            </class>
-        </classes>
-
-
-
-
-
-
-
+            </class>       
+           
+        </classes>  
+ </test>
+    <test name="package çalıştırma">
+        <packages>
+            <package name="tests.day14_testNGframework_xmlFiles"></package>
+            
+            
+            
+        </packages>
+        
+        
+        
     </test>
 
 

@@ -4,6 +4,8 @@
         <packages>
             <package name="tests.day12_TestNG"></package>
             <package name="tests.day13_testNGFramework"></package>
+            <package name="tests.day14_testNGframework_xmlFiles"></package>
+            
 
 
 
