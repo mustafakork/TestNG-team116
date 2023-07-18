@@ -1,5 +1,30 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="istenen Clasları paralel çalıştırma " parallel="classes" thread-count="2">
+<suite name="istenen Clasları paralel çalıştırma " parallel="classes" thread-count="2" verbose="">
+
+
+    <!--
+    paralel  çalıştırmak için xml  dosyamızda  çok kücük iki
+    ekleme yapmamız yeterli
+    1- paralel ="clases" / /  methods bölüşümün hangi seviyede yapılacağını belirler
+    testler çalışırken kakışmalar olamaması, görev böülmünün mümkün oldukça eşi olması,
+    bağımlı testlerin aynı browser tarafından çalıştırabilmesi için
+    tüm classları/package  manuel olarak testlere ayırıp  test bazında bölüşümyapmak en uygunu olacaktır.
+
+    2 thread-count="2"  aynı anda çalışacak browser sayısınnı belirler
+    yaptığımız bu configuration da  browserın ne olduğu configuration.properties dasyasından geldiği için
+    paralel çalışan tüm tüm browserla  paralel çalıtırma için(cross browser test) özel bir configoration
+    yapmak gereklidir.
+
+    (configuration.properties  dosyası içinde   browser=chrome, browser=firefox)
+
+    3- verbose="3" : tüm xml dosyalarında kullanıpabilir
+                    çalıştırma  sonrasında konsolda yazdırılan  detay seviyesini belirler
+
+                    1:minimum
+                    10:maximum
+                    olmak üzereistediğiniz değeri seçebilirsiniz
+
+    -->
     <test name="class çalıştırma">
         <classes>
             <class name="tests.day12_TestNG.C03_DependsOnMethods"></class>
