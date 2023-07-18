@@ -1,4 +1,4 @@
-package tests.day15_DataProvider;
+package tests.day15_TestNGReportDataProvider;
 
 import org.testng.annotations.Test;
 

@@ -1,6 +1,7 @@
-package tests.day15_DataProvider;
+package tests.day15_TestNGReportDataProvider;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -17,9 +18,13 @@ public class C01_reusableClassSwitchWindow {
         ReusableMethods.switchToWindow("New Window");
 
         String expectedTitle="New Window";
+        String  actualTitle = Driver.getDriver().getTitle();
+
+        Assert.assertEquals(actualTitle,expectedTitle);
 
 
 // sayfalari kapatin
+        Driver.closeDriver();
 
 
 
