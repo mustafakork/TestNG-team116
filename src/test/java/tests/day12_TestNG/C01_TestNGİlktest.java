@@ -14,6 +14,7 @@ public class C01_TestNGİlktest {
         ReusableMethods.bekle(5);
 
         Driver.closeDriver();
+        //değişiklik
     }
     @Test
     public void test02(){
