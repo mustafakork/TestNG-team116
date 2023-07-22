@@ -18,7 +18,7 @@ public class C02_RaporluNutellaTesti extends TestBaseRapor {
 
         //amazona gidin
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
-        extentTest.info("Kullanıcı amazon anasayfaya gider");
+        extentTest.info("KulClanıcı amazon anasayfaya gider");
 
 //nutella için arama yapın
         AmazonPage amazonPage =new AmazonPage();
