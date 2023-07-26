@@ -15,6 +15,7 @@ public class C01_AmazonSearch extends TestBaseCross {
         // Nutella icin arama yapalim
         WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
+        //.............................................
         // sonuclarin Nutella icerdigini test edelim
         String expectedicerik = "Nutella";
         WebElement aramaSonucuElementi= driver.findElement(By.xpath("(//div[@class='sg-col-inner'])[1]"));

@@ -16,6 +16,7 @@ public class QAHAUSE {
         String actualURL = Driver.getDriver().getCurrentUrl();
         String expectedUrl = "qa.hauseheaven.com";
         Assert.assertTrue(actualURL.contains(expectedUrl));
+        Assert.assertEquals(actualURL,expectedUrl);
 
 
 
